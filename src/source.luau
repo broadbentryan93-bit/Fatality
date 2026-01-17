@@ -4250,7 +4250,8 @@ function Fatality.new(Window: Window)
 
 			Fatality:CreateAnimation(HeaderText,0.35,{
 				TextStrokeTransparency = 0.640,
-				TextTransparency = 0
+				TextTransparency = 0,
+TextStrokeColor3 = Fatality.Colors.Main
 			})
 -- Add after HeaderText animation
 if TitleIcon then
