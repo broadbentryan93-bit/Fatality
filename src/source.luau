@@ -4251,7 +4251,6 @@ function Fatality.new(Window: Window)
 			Fatality:CreateAnimation(HeaderText,0.35,{
 				TextStrokeTransparency = 0.640,
 				TextTransparency = 0,
-Position = UDim2.new(0, 22, 0.5, 0)
 			})
 if TitleIcon then
     Fatality:CreateAnimation(TitleIcon, 0.35, {
@@ -6677,7 +6676,7 @@ function Fatality:CreateNotifier(): Notifier
 			HeaderText.BackgroundTransparency = 1.000
 			HeaderText.BorderColor3 = Color3.fromRGB(0, 0, 0)
 			HeaderText.BorderSizePixel = 0
-			HeaderText.Position = UDim2.new(0, 22, 0, 7)
+			HeaderText.Position = UDim2.new(0, 30, 0, 7)
 			HeaderText.Size = UDim2.new(1, 0, 0, 15)
 			HeaderText.ZIndex = 55
 			HeaderText.FontFace = Fatality.FontSemiBold
