@@ -4465,7 +4465,7 @@ end
 	HeaderText.Text = Window.Name
 	HeaderText.TextColor3 = Color3.fromRGB(229, 229, 229)
 	HeaderText.TextSize = 21.000
-	HeaderText.TextStrokeColor3 = Color3.fromRGB(205, 67, 218)
+	HeaderText.TextStrokeColor3 = Fatality.Colors.Main
 	HeaderText.TextStrokeTransparency = 0.640
 local TitleIcon = Instance.new("ImageLabel")
 TitleIcon.Name = Fatality:RandomString()
