@@ -4252,6 +4252,11 @@ function Fatality.new(Window: Window)
 				TextStrokeTransparency = 0.640,
 				TextTransparency = 0
 			})
+if TitleIcon then
+    Fatality:CreateAnimation(TitleIcon, 0.35, {
+        ImageTransparency = 0
+    })
+end
 
 			Fatality:CreateAnimation(UserIcon,0.45,{
 				ImageTransparency = 0,
@@ -4331,6 +4336,11 @@ function Fatality.new(Window: Window)
 				TextStrokeTransparency = 1,
 				TextTransparency = 1
 			})
+if TitleIcon then
+    Fatality:CreateAnimation(TitleIcon, 0.35, {
+        ImageTransparency = 1
+    })
+end
 
 			Fatality:CreateAnimation(HeaderLineShadow_2,0.5,{
 				BackgroundTransparency = 1,
@@ -4446,8 +4456,8 @@ function Fatality.new(Window: Window)
 	HeaderText.BackgroundTransparency = 1.000
 	HeaderText.BorderColor3 = Color3.fromRGB(0, 0, 0)
 	HeaderText.BorderSizePixel = 0
-	HeaderText.Position = UDim2.new(0, 5, 0.5, 0)
-	HeaderText.Size = UDim2.new(0, 100, 0.699999988, 0)
+	HeaderText.Position = UDim2.new(0, 30, 0.5, 0)
+HeaderText.Size = UDim2.new(0, 90, 0.699999988, 0) 
 	HeaderText.ZIndex = 4
 	HeaderText.Font = Enum.Font.GothamBold
 	HeaderText.Text = Window.Name
@@ -4455,6 +4465,19 @@ function Fatality.new(Window: Window)
 	HeaderText.TextSize = 21.000
 	HeaderText.TextStrokeColor3 = Color3.fromRGB(205, 67, 218)
 	HeaderText.TextStrokeTransparency = 0.640
+local TitleIcon = Instance.new("ImageLabel")
+TitleIcon.Name = Fatality:RandomString()
+TitleIcon.Parent = Header
+TitleIcon.AnchorPoint = Vector2.new(0, 0.5)
+TitleIcon.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TitleIcon.BackgroundTransparency = 1.000
+TitleIcon.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TitleIcon.BorderSizePixel = 0
+TitleIcon.Position = UDim2.new(0, 5, 0.5, 0)
+TitleIcon.Size = UDim2.new(0, 22, 0, 22)
+TitleIcon.ZIndex = 4
+TitleIcon.Image = Fatality.Lucide["lucide-eye"]  -- Using the eye icon from the Lucide table
+TitleIcon.ImageColor3 = Fatality.Colors.Main  -- This will make it pink like the theme
 
 	MenuButtonCont.Name = Fatality:RandomString()
 	MenuButtonCont.Parent = Header
@@ -4464,7 +4487,7 @@ function Fatality.new(Window: Window)
 	MenuButtonCont.BorderColor3 = Color3.fromRGB(0, 0, 0)
 	MenuButtonCont.BorderSizePixel = 0
 	MenuButtonCont.ClipsDescendants = true
-	MenuButtonCont.Position = UDim2.new(0, 115, 0.5, 0)
+	MenuButtonCont.Position = UDim2.new(0, 135, 0.5, 0)
 	MenuButtonCont.Size = UDim2.new(1, -275, 0.75, 0)
 	MenuButtonCont.ZIndex = 4
 
