@@ -6677,7 +6677,7 @@ function Fatality:CreateNotifier(): Notifier
 			HeaderText.BackgroundTransparency = 1.000
 			HeaderText.BorderColor3 = Color3.fromRGB(0, 0, 0)
 			HeaderText.BorderSizePixel = 0
-			HeaderText.Position = UDim2.new(0, 30, 0, 7)
+			HeaderText.Position = UDim2.new(0, 22, 0, 7)
 			HeaderText.Size = UDim2.new(1, 0, 0, 15)
 			HeaderText.ZIndex = 55
 			HeaderText.FontFace = Fatality.FontSemiBold
