@@ -4159,7 +4159,7 @@ function Fatality.new(Window: Window)
 	local Header = Instance.new("Frame")
 	local HeaderLine = Instance.new("Frame")
 	local UICorner_2 = Instance.new("UICorner")
-	local  = Instance.new("TextLabel")
+	local HeaderText = Instance.new("TextLabel")
 	local MenuButtonCont = Instance.new("Frame")
 	local tbc = Instance.new("ScrollingFrame")
 	local UIListLayout = Instance.new("UIListLayout")
@@ -4250,8 +4250,9 @@ function Fatality.new(Window: Window)
 
 			Fatality:CreateAnimation(HeaderText,0.35,{
 				TextStrokeTransparency = 0.640,
-				TextTransparency = 0,
+				TextTransparency = 0
 			})
+-- Add after HeaderText animation
 if TitleIcon then
     Fatality:CreateAnimation(TitleIcon, 0.35, {
         ImageTransparency = 0
@@ -4336,6 +4337,7 @@ end
 				TextStrokeTransparency = 1,
 				TextTransparency = 1
 			})
+-- Add after HeaderText animation (closing section)
 if TitleIcon then
     Fatality:CreateAnimation(TitleIcon, 0.35, {
         ImageTransparency = 1
@@ -4456,14 +4458,14 @@ end
 	HeaderText.BackgroundTransparency = 1.000
 	HeaderText.BorderColor3 = Color3.fromRGB(0, 0, 0)
 	HeaderText.BorderSizePixel = 0
-	HeaderText.Position = UDim2.new(0, 22, 0.5, 0)  
-HeaderText.Size = UDim2.new(0, 90, 0.699999988, 0) 
+	HeaderText.Position = UDim2.new(0, 5, 0.5, 0)
+	HeaderText.Size = UDim2.new(0, 100, 0.699999988, 0)
 	HeaderText.ZIndex = 4
 	HeaderText.Font = Enum.Font.GothamBold
 	HeaderText.Text = Window.Name
 	HeaderText.TextColor3 = Color3.fromRGB(229, 229, 229)
 	HeaderText.TextSize = 21.000
-	HeaderText.TextStrokeColor3 = Fatality.Colors.Main
+	HeaderText.TextStrokeColor3 = Color3.fromRGB(205, 67, 218)
 	HeaderText.TextStrokeTransparency = 0.640
 local TitleIcon = Instance.new("ImageLabel")
 TitleIcon.Name = Fatality:RandomString()
@@ -6762,7 +6764,7 @@ function Fatality:CreateNotifier(): Notifier
 					ImageTransparency = 1
 				})
 
-				Fatality:CreateAnimation(,0.25,{
+				Fatality:CreateAnimation(HeaderText,0.25,{
 					TextTransparency = 1
 				})
 
